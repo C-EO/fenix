@@ -186,8 +186,10 @@ class CollectionTest {
 
         homeScreen {
         }.expandCollection(firstCollectionName) {
+            swipeToBottom()
             swipeCollectionItemLeft(firstWebPage.title)
             verifyTabSavedInCollection(firstWebPage.title, false)
+            swipeToBottom()
             swipeCollectionItemRight(secondWebPage.title)
             verifyTabSavedInCollection(secondWebPage.title, false)
         }
